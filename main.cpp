@@ -3,6 +3,7 @@
 
 int main() {
 	TaskManager taskManager;
+    taskManager.loadTasksFromFile("tasks.txt");//Load tasks from file
 
 	int choice;
     do {
