@@ -1,5 +1,6 @@
 #include "task_manager.h"
 #include <iostream>
+#include <fstream>
 
 //Add task to priority queue
 void TaskManager::addTask(const Task& task) {
@@ -32,4 +33,10 @@ void TaskManager::displayTasks() const {
 //Compare two task objects based on their priority
 bool TaskManager::CompareTask::operator()(const Task& t1, const Task& t2) const {
 	return t1.getPriority() < t2.getPriority();
+}
+
+void TaskManager::loadTasksFromFile(const std::string& filename) {
+	std::ifstream infile(filename);
+	std::string name;
+	int priority;
 }
