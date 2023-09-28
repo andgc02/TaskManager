@@ -11,9 +11,12 @@ public:
 	void displayTasks() const;
 
 private:
-	std::priority_queue<Task, std::vector<Task>, CompareTask> tasks;
 
 	struct CompareTask {
 		bool operator()(const Task& t1, const Task& t2) const;
 	};
+
+	std::priority_queue<Task, std::vector<Task>, CompareTask> tasks;
+
+
 };
