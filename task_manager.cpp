@@ -29,6 +29,7 @@ void TaskManager::displayTasks() const {
 	}
 }
 
+//Compare two task objects based on their priority
 bool TaskManager::CompareTask::operator()(const Task& t1, const Task& t2) const {
 	return t1.getPriority() < t2.getPriority();
 }
