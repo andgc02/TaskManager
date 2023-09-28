@@ -10,8 +10,8 @@ public:
 	void addTask(const Task& task); //Add task to priority queue
 	void completeTask(); //Mark highest priority task as complete and remove it
 	void displayTasks() const; //display all the tasks in the priority queue
-	void saveTasksToFile(const std::string& filename) const;
-	void loadTasksFromFile(const std::string& filename);
+	void saveTasksToFile(const std::string& filename) const; //save tasks to file is const as it does not modify any task
+	void loadTasksFromFile(const std::string& filename); //load from file modifies the TaskManager by adding saved tasks
 
 private:
 	// The CompareTask struct provides a way to compare two Task objects
